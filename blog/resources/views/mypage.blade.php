@@ -1,21 +1,27 @@
+@extends('layouts.app')
+
+@section('content')
 <!DOCTYPE HTML>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="/css/app.css">
         <title>マイページ画面</title>
     </head>
     <body>
         <h1>マイページ画面</h1>
-        <form action="/" method="">
             @csrf
             <h2>お客様情報</h2>
             <div class="name">
                 <p>氏名</p>
-                <p class = 'name'>{{ $user->name }}</p>
+
             </div>
             <div class="email">
                 <p>E-mail adress</p>
-                <p class = 'email'>{{ $user->email }}</p>
+         
             </div>
             <h2>現在の予約</h2>
             <div class="title">
@@ -34,8 +40,7 @@
                 <P>終了日時</P>
                 <p class = 'start_date'>{{ $schedule->start_date }}</p>
             </div>
-        </form>
-        <br>
         <div class="back">[<a href="/">Topに戻る</a>]</div>
     </body>
 </html>
+@endsection

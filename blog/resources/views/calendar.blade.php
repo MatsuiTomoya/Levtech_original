@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -9,7 +12,8 @@
     </head>
     <body>
         <div id='calendar'></div>
-        <script src="{{ mix('js/app.js') }}"></script>
+        <script src="{{ mix('js/calendar.js') }}"></script>
         <div class="back">[<a href="/">トップに戻る</a>]</div>
     </body>
 </html>
+@endsection

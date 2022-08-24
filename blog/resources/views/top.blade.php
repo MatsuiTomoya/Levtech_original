@@ -1,5 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts.app')
+
+@section('content')
     <head>
         <meta charset="utf-8">
         <title>トップ画面</title>
@@ -34,4 +38,5 @@
         <p>1.予約管理画面に行く</p>
         <p>2.削除したい予約をクリックして削除する</p>
     </body>
+@endsection    
 </html>

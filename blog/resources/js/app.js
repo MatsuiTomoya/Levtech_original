@@ -1,9 +1,9 @@
 //import './bootstrap';
 require('./bootstrap');
 
-window.axios = require("axios");
+//window.axios = require("axios");
 
-require('./calendar');
+//require('./calendar');
 
 import Alpine from 'alpinejs';
 

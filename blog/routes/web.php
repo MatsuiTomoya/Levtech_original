@@ -31,12 +31,12 @@ Route::get('/calendar', function () {
 Route::post('/schedule-add', [ScheduleController::class, 'scheduleAdd'])->name('schedule-add');
 // イベント取得処理
 Route::post('/schedule-get', [ScheduleController::class, 'scheduleGet'])->name('schedule-get');
-
+// イベント削除処理
 Route::post('/schedule-delete/{schedule}', [ScheduleController::class, 'scheduleDelete'])->name('schedule-delete');
 
 Route::controller(PostController::class)->group(function () {
-    Route::get('/', 'top');
-    Route::get('/mypage', 'mypage');
+    Route::get('/', 'top')->middleware('auth');
+    Route::get('/mypage', 'mypage')->middleware('auth');
 });
 
 
